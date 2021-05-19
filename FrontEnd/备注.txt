@@ -1,0 +1,5 @@
+captcha.js 一个生成验证码的插件，使用 js 和 canvas 生成
+https://www.cnblogs.com/chengxs/p/10480504.html
+https://github.com/saucxs/captcha-mini
+
+https://github.com/saucxs/full_stack_knowledge_list

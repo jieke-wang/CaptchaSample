@@ -1,0 +1,29 @@
+@model HomeViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Headers{ 
+    <environment names="Development,Staging,Production">
+        <link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl" rel="stylesheet" type="text/css" />
+    </environment>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form action="/Home/Index" method="post">
+    <label asp-for="CaptchaCode">Retype the code from the picture:</label>
+    <captcha id="ExampleCaptcha" user-input-id="CaptchaCode" />
+    <div class="actions">
+        <input asp-for="CaptchaCode" />
+        <input type="submit" value="Validate" />
+        <span asp-validation-for="CaptchaCode"></span>
+        @if ((Context.Request.Method == "POST") && ViewData.ModelState.IsValid)
+        {
+            <span class="correct">Correct!</span>
+        }
+    </div>
+</form>

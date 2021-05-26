@@ -15,3 +15,5 @@ The BotDetect ASP.NET CAPTCHA NuGet package has been added to your project.
 
 https://captcha.com/mvc/mvc-captcha.html
 https://captcha.com/doc/aspnet/net-captcha-options.html
+https://github.com/pigivc/AudioCaptchaCore
+https://www.nuget.org/packages/Pigi.Captcha/
